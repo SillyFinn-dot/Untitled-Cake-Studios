@@ -2,49 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Untitled C🎂ke Studios</title>
+    <title>Untitled Cake Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { background: linear-gradient(135deg, #FF00FF, #0000FF, #800080); background-attachment: fixed; font-family: 'Verdana', sans-serif; padding: 0; margin: 0; color: #000; overflow: hidden; }
-        .top-bar-container { position: fixed; top: 0; width: 100%; background: #D4D0C8; border-bottom: 3px outset #FFF; padding: 5px; z-index: 100; }
-        .window { border: 3px outset #FFF; background-color: #D4D0C8; padding: 2px; max-width: 1100px; margin: 70px auto 10px auto; box-shadow: 10px 10px 30px #000; }
-        .title-bar { background: linear-gradient(to right, #FF00FF, #00FFFF); color: white; padding: 4px 10px; font-weight: bold; font-size: 14px; display: flex; justify-content: space-between; }
-        .brand-header { background: #EFEFEF; padding: 25px; text-align: center; border-bottom: 2px inset #FFF; }
-        .brand-header h1 { margin: 0; font-size: 40px; font-family: 'Arial Black', sans-serif; color: #FF4500; text-shadow: 2px 2px #FFFF00; }
-        .tab-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 5px; padding: 5px; }
-        .nav-btn { background: #7FFF00; border: 2px outset #FFF; padding: 8px 12px; cursor: pointer; font-weight: bold; font-size: 10px; }
-        .frame { display: none; padding: 25px; background: #FFF; border: 2px inset #FFF; margin: 5px; min-height: 350px; overflow-y: auto; }
-        .frame.active { display: block; }
-        .stats { background: #000; color: #0F0; padding: 10px; font-family: monospace; font-size: 14px; margin-top: 15px; border: 2px inset #FFF; }
-        .taskbar { position: fixed; bottom: 0; width: 100%; height: 35px; background: #D4D0C8; border-top: 3px outset #FFF; display: flex; align-items: center; padding: 0 10px; justify-content: space-between; font-weight: bold; }
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --text-main: #ffffff;
+            --text-sub: #b0b0b0;
+            --accent: #ff6b6b;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header { padding: 60px 20px; text-align: center; }
+        header h1 { font-family: 'Fredoka One', cursive; font-size: 3rem; margin-bottom: 5px; color: var(--accent); }
+        header p { color: var(--text-sub); font-size: 1.1rem; }
+
+        .nav-bar { display: flex; justify-content: center; gap: 10px; padding: 20px; flex-wrap: wrap; }
+        .nav-btn { 
+            background: var(--surface); border: 2px solid #333; color: var(--text-main);
+            padding: 12px 24px; border-radius: 50px; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease; font-family: 'Quicksand', sans-serif;
+        }
+        .nav-btn:hover { border-color: var(--accent); background: #222; }
+
+        .main-container { max-width: 800px; margin: 20px auto; padding: 20px; }
+        .section { display: none; }
+        .section.active { display: block; }
+
+        .card { background: var(--surface); padding: 30px; border-radius: 20px; border: 1px solid #333; }
+        .card h2 { font-family: 'Fredoka One', cursive; color: var(--accent); margin-top: 0; }
+        .collab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        .collab-item { background: #252525; padding: 15px; border-radius: 10px; text-align: center; }
     </style>
 </head>
 <body>
-<div class="top-bar-container">
-    <div class="tab-container">
-        <button class="nav-btn" onclick="show('home')">HOME</button>
-        <button class="nav-btn" onclick="show('projects')">PROJECTS</button>
-        <button class="nav-btn" onclick="show('family')">FAMILY HUB</button>
-        <button class="nav-btn" onclick="show('news')">NEWS</button>
+
+<header>
+    <h1>Untitled Cake Studios</h1>
+    <p>Creating fun, imaginative, and safe experiences for everyone.</p>
+</header>
+
+<div class="nav-bar">
+    <button class="nav-btn" onclick="show('home')">Home</button>
+    <button class="nav-btn" onclick="show('about')">About</button>
+    <button class="nav-btn" onclick="show('family')">Family & Safety</button>
+    <button class="nav-btn" onclick="show('collab')">Collaborators</button>
+</div>
+
+<div class="main-container">
+    <div id="home" class="section active card">
+        <h2>Welcome to the Studio</h2>
+        <p>Welcome! Untitled Cake Studios is a place where creativity comes first. Whether you are a kid who loves playing games or an adult who appreciates clean, thoughtful design, you belong here. We build things that are simple, fun, and built to last.</p>
+    </div>
+
+    <div id="about" class="section card">
+        <h2>Our Goal</h2>
+        <p>Our studio was founded on the idea that games should be fun above all else. We focus on smooth movement, clear goals, and making sure that every project we work on feels special. We don't just make games—we build worlds for you to explore.</p>
+    </div>
+
+    <div id="family" class="section card">
+        <h2>Family & Safety</h2>
+        <p>We take safety seriously, but we keep it simple. Our focus is on creating environments that are welcoming to all ages.</p>
+        <ul>
+            <li><strong>Safe Play:</strong> All games are designed to be friendly and secure.</li>
+            <li><strong>Pure Fun:</strong> No complicated menus, no hidden tricks—just great gameplay.</li>
+            <li><strong>Inclusive Design:</strong> We build for everyone, ensuring that everyone can join in the fun.</li>
+        </ul>
+    </div>
+
+    <div id="collab" class="section card">
+        <h2>Our Collaborators</h2>
+        <p>The studio wouldn't be the same without our dedicated team of testers and friends who help us make everything better.</p>
+        <div class="collab-grid">
+            <div class="collab-item">Malaki</div>
+            <div class="collab-item">Dilan</div>
+            <div class="collab-item">Miley</div>
+            <div class="collab-item">Riley</div>
+        </div>
     </div>
 </div>
-<div class="window">
-    <div class="title-bar"><span>Untitled_C🎂ke_Studios_PUBLISHED.exe</span></div>
-    <div class="brand-header"><h1>Untitled C🎂ke Studios</h1></div>
-    <div id="home" class="frame active">
-        <h2>Welcome!</h2>
-        <p>I'm Finn, a 9-year-old dev making games for the world. Welcome to my studio!</p>
-        <div class="stats">>> LIVE_STATS: 24 ACTIVE | 14,082 VISITS</div>
-    </div>
-    <div id="projects" class="frame"><h2>Games</h2><ul><li>Deliver Packages</li><li>Super Bit World!</li><li>V4 Movement</li></ul></div>
-    <div id="family" class="frame"><h2>Family Hub</h2><p>Safe, fun, and inclusive for everyone!</p></div>
-    <div id="news" class="frame"><h2>News</h2><p>v33131 is now LIVE!</p></div>
-</div>
-<div class="taskbar"><div>Finnithy_Master_Suite | 2026</div><div>PUBLISHED_BUILD</div></div>
+
 <script>
     function show(id) {
-        document.querySelectorAll('.frame').forEach(f => f.classList.remove('active'));
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.getElementById(id).classList.add('active');
     }
 </script>
 </body>
-</html>
+                                                                                                                                                                                                                                                                    </html>
+                                                                                                                                                                                                                                                                    
