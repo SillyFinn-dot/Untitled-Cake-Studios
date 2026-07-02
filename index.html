@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Untitled Cake Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-top">
-            <div class="logo">🎮 CAKE STUDIOS</div>
-            <ul class="nav">
-                <li><a href="#" onclick="show('home'); return false;">HOME</a></li>
-                <li><a href="#" onclick="show('gallery'); return false;">GALLERY</a></li>
-                <li><a href="#" onclick="show('team'); return false;">TEAM</a></li>
-                <li><a href="#" onclick="show('about'); return false;">ABOUT</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🎮 Cake Studios</div>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="show('home'); return false;" class="nav-link">Home</a></li>
+                <li><a href="#" onclick="show('gallery'); return false;" class="nav-link">Gallery</a></li>
+                <li><a href="#" onclick="show('team'); return false;" class="nav-link">Team</a></li>
+                <li><a href="#" onclick="show('about'); return false;" class="nav-link">About</a></li>
             </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="main-content">
+    <div class="content">
         <!-- HOME -->
         <div id="home" class="section active">
-            <div class="section-box">
-                <h1>Welcome to Cake Studios</h1>
-                <p>Creating fun and safe games for everyone.</p>
-                <div style="margin-top: 20px;">
-                    <p>We are a small studio dedicated to making quality games that are fun and family-friendly.</p>
+            <div class="container">
+                <div class="hero">
+                    <h1>Untitled Cake Studios</h1>
+                    <p>Creating fun and safe games for everyone</p>
                 </div>
             </div>
         </div>
 
         <!-- GALLERY -->
         <div id="gallery" class="section">
-            <div class="section-box">
-                <h1>Gallery</h1>
+            <div class="container">
+                <h2>Gallery</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">Early Concepts</div>
                     <div class="gallery-item">Character Design</div>
@@ -48,28 +48,28 @@
 
         <!-- TEAM -->
         <div id="team" class="section">
-            <div class="section-box">
-                <h1>Our Team</h1>
-                <div class="team-list">
-                    <div class="team-item">
-                        <div class="team-name">Malaki</div>
-                        <div class="team-role">Game Designer</div>
-                        <div class="team-desc">Creates engaging game mechanics and experiences.</div>
+            <div class="container">
+                <h2>The Team</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Malaki</h3>
+                        <p class="role">Game Designer</p>
+                        <p>Passionate about creating engaging game mechanics and memorable experiences.</p>
                     </div>
-                    <div class="team-item">
-                        <div class="team-name">Dilan</div>
-                        <div class="team-role">Lead Developer</div>
-                        <div class="team-desc">Leads programming and development efforts.</div>
+                    <div class="team-card">
+                        <h3>Dilan</h3>
+                        <p class="role">Lead Developer</p>
+                        <p>Expert programmer dedicated to clean code and optimal performance.</p>
                     </div>
-                    <div class="team-item">
-                        <div class="team-name">Miley</div>
-                        <div class="team-role">Art Director</div>
-                        <div class="team-desc">Designs all visual art and graphics.</div>
+                    <div class="team-card">
+                        <h3>Miley</h3>
+                        <p class="role">Art Director</p>
+                        <p>Creative visual designer bringing our games to life with stunning art.</p>
                     </div>
-                    <div class="team-item">
-                        <div class="team-name">Riley</div>
-                        <div class="team-role">QA Lead</div>
-                        <div class="team-desc">Tests and ensures quality of games.</div>
+                    <div class="team-card">
+                        <h3>Riley</h3>
+                        <p class="role">QA Lead</p>
+                        <p>Ensures every game meets our high standards for quality and fun.</p>
                     </div>
                 </div>
             </div>
@@ -77,30 +77,43 @@
 
         <!-- ABOUT -->
         <div id="about" class="section">
-            <div class="section-box">
-                <h1>About Cake Studios</h1>
-                <div class="about-text">
-                    <h2>Our Mission</h2>
-                    <p>We create fun, imaginative, and safe experiences for everyone. Quality and player experience are our top priorities.</p>
-                    
-                    <h2>Family Friendly</h2>
-                    <p>All of our games are designed to be safe and welcoming for all ages. We focus on clear goals, fun gameplay, and inclusive design.</p>
-                    
-                    <h2>Our Values</h2>
-                    <ul>
-                        <li>Creativity comes first</li>
-                        <li>Quality over quantity</li>
-                        <li>Safe and inclusive</li>
-                        <li>Player focused</li>
-                    </ul>
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div>
+                        <h3>Who We Are</h3>
+                        <p>Untitled Cake Studios is a small team of developers, designers, and artists passionate about creating games that are fun, accessible, and meaningful for everyone.</p>
+                        
+                        <h3>Our Values</h3>
+                        <ul class="values-list">
+                            <li>Creativity First</li>
+                            <li>Quality Over Quantity</li>
+                            <li>Inclusive Design</li>
+                            <li>Family Safe</li>
+                            <li>Player Focused</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Family Friendly</h3>
+                        <p>All Cake Studios games are designed with families in mind. We maintain strict content standards, clear gameplay goals, and welcoming environments.</p>
+                        
+                        <h3>Our Commitment</h3>
+                        <ul class="values-list">
+                            <li>Safe Play Environments</li>
+                            <li>Clear Game Objectives</li>
+                            <li>Thoughtful Design</li>
+                            <li>Community Focused</li>
+                            <li>Continuous Improvement</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2026 Untitled Cake Studios. All rights reserved.</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2026 Untitled Cake Studios</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
