@@ -11,5 +11,3 @@ function show(sectionId) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
-
-console.log('✨ Cake Studios website loaded!');
